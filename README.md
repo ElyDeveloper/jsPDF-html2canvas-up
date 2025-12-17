@@ -5,32 +5,31 @@
   <a href="https://www.npmjs.com/package/jspdf-html2canvas"><img src="https://img.shields.io/npm/l/jspdf-html2canvas.svg?sanitize=true" alt="License"></a>
 </p>
 
-# jsPDF-html2canvas
+# jsPDF-html2canvas-up
 A combine usage with jsPDF &amp; html2canvas-pro, which translating html content to PDF file. Written in Typescript.
 
 > html2PDF function will auto fit the target dom width into PDF size. So no need to worry about the overflow part. And if the content height is over 1 pdf, it'll auto seperate it into another pdf page.
 
-> **Note:** This package now uses `html2canvas-pro` instead of the original `html2canvas` for better performance and additional features.(version above v1.6.0)
+> **Note:** This package now uses `html2canvas-pro` instead of the original `html2canvas` for better performance and additional features. **html2canvas-pro is bundled in the distribution**, so you don't need to load it separately.
 
 
 ## Install
 
 ```
-npm i jspdf-html2canvas
+npm i jspdf-html2canvas-up
 ```
 
 ```js
-import html2PDF from 'jspdf-html2canvas';
+import html2PDF from 'jspdf-html2canvas-up';
 
 html2PDF(node, options);
 ```
 
-since this plugin is an umd module, you can also use by cdn with `/dist/jspdf-html2canvas.min.js`, just remember to include both `jspdf` & `html2canvas-pro` cdn before this plugin.
+since this plugin is an umd module, you can also use by cdn with `/dist/jspdf-html2canvas-up.min.js`. Just remember to include `jspdf` cdn before this plugin.
 
 ```js
 <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas-pro@latest/dist/html2canvas-pro.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jspdf-html2canvas@latest/dist/jspdf-html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf-html2canvas-up@latest/dist/jspdf-html2canvas-up.min.js"></script>
 ```
 
 

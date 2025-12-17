@@ -7,13 +7,9 @@ module.exports = {
   entry: path.join(__dirname, 'src/index.ts'),
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: isProd ? 'jspdf-html2canvas.min.js' : 'jspdf-html2canvas.js',
+    filename: isProd ? 'jspdf-html2canvas-up.min.js' : 'jspdf-html2canvas-up.js',
     library: {
-      name: {
-        root: 'html2PDF',
-        amd: 'jspdf-html2canvas',
-        commonjs: 'jspdf-html2canvas'
-      },
+      name: 'html2PDF',
       type: 'umd',
       export: 'default'
     },
@@ -39,12 +35,6 @@ module.exports = {
       commonjs2: 'jspdf',
       amd: 'jspdf',
       root: 'jspdf'
-    },
-    'html2canvas-pro': {
-      commonjs: 'html2canvas-pro',
-      commonjs2: 'html2canvas-pro',
-      amd: 'html2canvas-pro',
-      root: 'html2canvas'
     }
   },
   experiments: {

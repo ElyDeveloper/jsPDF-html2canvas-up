@@ -5,7 +5,7 @@ module.exports = {
   entry: path.join(__dirname, 'src/index.ts'),
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'jspdf-html2canvas.esm.js',
+    filename: 'jspdf-html2canvas-up.esm.js',
     library: {
       type: 'module'
     },

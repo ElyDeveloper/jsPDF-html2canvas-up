@@ -34,6 +34,9 @@ async function html2PDF(
   dom: HTMLElement | HTMLElement[],
   opts: Partial<Options> = {},
 ) {
+  // Use the imported html2canvas directly
+  console.log('html2PDF: Using bundled html2canvas');
+
   const _opts = joinObject<Options>(defaultOpts, opts);
   const pdfInstance = getPdf(_opts);
   // init pdf

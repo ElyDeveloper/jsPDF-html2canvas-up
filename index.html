@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <style>
     .page {
-      height: 700px;
+      /* height: 700px; */
     }
     .page img {
       max-width: 100%;
@@ -48,7 +48,6 @@
     }
   </style>
   <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
   <button id="print-btn" class="btn btn-success m-5">生成PDF</button>
@@ -121,8 +120,11 @@
     </div>
   </div>
 
-  <script src="dist/jspdf-html2canvas.js"></script>
+  <script src="dist/jspdf-html2canvas-up.min.js"></script>
   <script>
+  // console.log('Global check - html2canvas:', typeof window.html2canvas);
+  console.log('Global check - jspdf:', typeof window.jspdf);
+  
   document.getElementById('print-btn').addEventListener('click', function() {
     // one page
     // html2PDF(document.getElementById('page'), {
@@ -164,8 +166,8 @@
         scrollX: 0,
       },
       success(pdf) {
-        console.log(this);
-        // pdf.save(this.output);
+        console.log('PDF Generated', this);
+        pdf.save(this.output);
       },
       // autoResize: true,
     })
